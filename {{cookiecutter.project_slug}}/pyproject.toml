@@ -62,6 +62,7 @@ addopts = "--doctest-modules --basetemp .pytest"
 markers = [
     "long: marks tests as long (deselect with '-m \"not long\"')",
     "std: Software Test Description ID of the test"
+]
 
 [tool.coverage.report]
 show_missing = true
