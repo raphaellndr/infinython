@@ -1,4 +1,4 @@
-"""{{cookiecutter.project_name}} package root."""
+"""{{cookiecutter.project_name|capitalize}} package root."""
 
 # The current version of this project is computed during the installation stage and then set in this
 # variable. Thus, the default value `0.0.0` is only here to create the `version` placeholder and

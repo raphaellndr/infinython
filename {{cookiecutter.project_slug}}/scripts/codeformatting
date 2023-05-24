@@ -16,7 +16,7 @@ else
     # Reformat
 
     echo "████████████████████████████   ruff   █████████████████████████████"
-    poetry run ruff . --fix
+    poetry run ruff .
     echo "████████████████████████████   black   █████████████████████████████"
     poetry run black src/{{cookiecutter.project_slug}} tests
 fi

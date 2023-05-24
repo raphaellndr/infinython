@@ -1,46 +1,34 @@
-# Chocolatine
+# {{cookiecutter.project_name}}
 
 ## Installation instructions
 
 ### Prerequisites
 
-In order to generate a python project from this repository, you need to 
-have [cookiecutter](https://github.com/cookiecutter/cookiecutter) installed 
-on your machine. You can find the instructions [here.](https://cookiecutter.readthedocs.io/en/stable/installation.html#install-cookiecutter)
-Obviously, you also need to have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-installed.
+First, [poetry](https://github.com/python-poetry/poetry) needs to be installed on your machine. If 
+not, simply head to the [documentation](https://python-poetry.org/docs/#installation) and follow the 
+instructions.
 
-## Usage
+### Installation
 
-Once cookiecutter installed, you are set to generate an empty python project
-using this repository. You can achieve this by either cloning the repo 
-locally or working directly with git.
+Once poetry correctly installed, do as follows to set up your project:
 
-### Cloning the repository
+- Head to your project:
+```shell
+cd {{cookiecutter.project_name}}
+```
 
-On your machine, simply run the following command to clone the repository
-locally:
+- Spawn a shell, within the virtual environment (if one doesn’t exist yet, it will be created):
+```shell
+poetry shell
+```
 
-````shell
-git clone git@void.visiblepatient.com:rlandure/chocolatine.git
-````
+- Lock (without installing) the dependencies specified in pyproject.toml:
+```shell
+poetry lock
+```
 
-Then, to generate the project:
+- Read the pyproject.toml file from the current project, resolve the dependencies and install them:
+```shell
+poetry install
+```
 
-````shell
-cookiecutter chocolatine
-````
-
-### Working with git
-
-Where you want to generate your project, run the following command:
-
-````shell
-cookiecutter git@void.visiblepatient.com:rlandure/chocolatine.git
-````
-
----
-
-In both cases, you will be prompted to enter a few config values (defined
-in *coockiecutter.json*). Once done, Cookiecutter will generate a project 
-from the template, using the entered values.
