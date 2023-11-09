@@ -1,0 +1,12 @@
+"""Application main entrypoint."""
+
+from .cli import app
+
+
+def main() -> None:
+    """Main program entrypoint."""
+    app()
+
+
+if __name__ == "__main__":
+    main()

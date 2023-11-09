@@ -1,0 +1,11 @@
+"""Command line interface entry point."""
+
+import typer
+
+app = typer.Typer(no_args_is_help=True)
+
+
+@app.callback(invoke_without_command=True)
+def default(ctx: typer.Context):
+    """Default commands when none has yet been added."""
+    typer.echo(ctx.get_help())
