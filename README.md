@@ -24,8 +24,3 @@ You will only need to have Cookiecutter installed. This can be easily done by fo
     ```
 
    Cookiecutter will prompt you for values for the project variables defined in `cookiecutter.json`. Fill in the values as needed.
-
-
-## Running the Project
-
-[Provide instructions on how to run your project here. This might include details about configuration, command-line arguments, or any other relevant information.]
