@@ -1,45 +1,30 @@
 # Infinython
 
-Infinython is a template for a simple Python project created using Cookiecutter.
+Infinython is a template for a simple Python project created using 
+[Cookiecutter](https://cookiecutter.readthedocs.io/en/stable/index.html). It will generate a project
+with [Poetry](https://python-poetry.org/) configured, so you should consider [installing it](https://python-poetry.org/docs/#installation).
 
 ## Requirements
 
-- Python (Versions: 3.7, 3.8, 3.9, 3.10, 3.11, 3.12)
+You will only need to have Cookiecutter installed. This can be easily done by following the 
+[official installation instructions](https://cookiecutter.readthedocs.io/en/stable/installation.html#install-cookiecutter).
 
 ## Getting Started
 
 1. Clone this repository:
 
     ```bash
-    git clone https://github.com/[your-username]/template.git
-    cd template
+    git clone https://github.com/raphaellndr/infinython.git
     ```
 
-2. Create a virtual environment (optional but recommended):
+2. Run Cookiecutter to generate a Python project:
 
     ```bash
-    python -m venv venv
+    cookiecutter infinython
     ```
 
-3. Activate the virtual environment:
+   Cookiecutter will prompt you for values for the project variables defined in `cookiecutter.json`. Fill in the values as needed.
 
-    - On Windows:
-
-        ```bash
-        .\venv\Scripts\activate
-        ```
-
-    - On macOS/Linux:
-
-        ```bash
-        source venv/bin/activate
-        ```
-
-4. Install project dependencies:
-
-    ```bash
-    pip install -r requirements.txt
-    ```
 
 ## Running the Project
 
