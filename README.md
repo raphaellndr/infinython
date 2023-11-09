@@ -1,34 +1,46 @@
-# {{cookiecutter.project_name}}
+# Infinython
 
-## Installation instructions
+Infinython is a template for a simple Python project created using Cookiecutter.
 
-### Prerequisites
+## Requirements
 
-First, [poetry](https://github.com/python-poetry/poetry) needs to be installed on your machine. If 
-not, simply head to the [documentation](https://python-poetry.org/docs/#installation) and follow the 
-instructions.
+- Python (Versions: 3.7, 3.8, 3.9, 3.10, 3.11, 3.12)
 
-### Installation
+## Getting Started
 
-Once poetry correctly installed, do as follows to set up your project:
+1. Clone this repository:
 
-- Head to your project:
-```shell
-cd {{cookiecutter.project_name}}
-```
+    ```bash
+    git clone https://github.com/[your-username]/template.git
+    cd template
+    ```
 
-- Spawn a shell, within the virtual environment (if one doesn’t exist yet, it will be created):
-```shell
-poetry shell
-```
+2. Create a virtual environment (optional but recommended):
 
-- Lock (without installing) the dependencies specified in pyproject.toml:
-```shell
-poetry lock
-```
+    ```bash
+    python -m venv venv
+    ```
 
-- Read the pyproject.toml file from the current project, resolve the dependencies and install them:
-```shell
-poetry install
-```
+3. Activate the virtual environment:
 
+    - On Windows:
+
+        ```bash
+        .\venv\Scripts\activate
+        ```
+
+    - On macOS/Linux:
+
+        ```bash
+        source venv/bin/activate
+        ```
+
+4. Install project dependencies:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Running the Project
+
+[Provide instructions on how to run your project here. This might include details about configuration, command-line arguments, or any other relevant information.]
