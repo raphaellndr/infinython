@@ -1,12 +1,9 @@
 [build-system]
-requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning"]
+requires = ["poetry-core>=1.5.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "{{cookiecutter.project_slug}}"
-# The current version of this project is computed during the installation stage and then set in this
-# variable. Thus, the default value `0.0.0` is only here to create the `version` placeholder and
-# doesn't reflect the current version of this project.
 version = "0.0.0"
 description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.author}}"]
@@ -37,9 +34,6 @@ pytest-cov = "^4.0.0"
 {{cookiecutter.project_slug}} = "{{cookiecutter.project_slug}}.__main__:main"
 {%- endif %}
 
-[tool.poetry-dynamic-versioning]
-enable = true
-
 [tool.black]
 line-length = 100
 
@@ -68,26 +62,9 @@ select = ["E", "F", "I"]
 
 [tool.pytest.ini_options]
 addopts = "--doctest-modules --basetemp .pytest"
-markers = [
-    "long: marks tests as long (deselect with '-m \"not long\"')",
-    "std: Software Test Description ID of the test"
-]
 
 [tool.coverage.report]
 show_missing = true
-exclude_lines = [
-    # Have to re-enable the standard pragma
-    "pragma: no cover",
-    # Don't complain about missing debug-only code:
-    "def __repr__",
-    "if self.debug",
-    # Don't complain if tests don't hit defensive assertion code:
-    "raise AssertionError",
-    "raise NotImplementedError",
-    # Don't complain if non-runnable code isn't run:
-    "if 0:",
-    "if __name__ == .__main__.:"
-]
 fail_under = 10
 
 [tool.coverage.run]
